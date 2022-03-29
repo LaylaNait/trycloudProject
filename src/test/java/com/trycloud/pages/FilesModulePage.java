@@ -29,7 +29,7 @@ public class FilesModulePage {
     @FindBy(xpath = "//a[contains(.,'Favorites')]")
    public WebElement favorite;
     //6
-    @FindBy(xpath = "//tbody[@id='fileList']//span[@class='innernametext']")
+    @FindBy(xpath = "//div[@id='app-content-files']//*[@class='innernametext']")
     WebElement actualNamesOfFiles;
     //6 /7 /8 /9
     @FindBy(xpath = "//span[@class='icon icon-add']")
