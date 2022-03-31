@@ -2,6 +2,7 @@ package com.trycloud.step_definitions;
 
 import com.github.javafaker.Faker;
 import com.trycloud.pages.FilesModulePage;
+import com.trycloud.pages.LandingPages;
 import com.trycloud.pages.LoginPage;
 import com.trycloud.utilities.BrowserUtils;
 import com.trycloud.utilities.ConfigurationReader;
@@ -23,6 +24,7 @@ public class Step_Defs_Naz {
     LoginPage loginPage = new LoginPage();
     FilesModulePage filesModulePage = new FilesModulePage();
     Faker faker = new Faker();
+    LandingPages landingPages =new LandingPages();
     String folderName = faker.cat().name();
 
 
@@ -79,8 +81,9 @@ public class Step_Defs_Naz {
 
     @When("the user clicks the Files module")
     public void theUserClicksTheFilesModule() {
-        Methods.hover(filesModulePage.filesModule);
-        filesModulePage.filesModule.click();
+        Methods.hover(landingPages.filesModule);
+
+        landingPages.filesModule.click();
 
     }
 
