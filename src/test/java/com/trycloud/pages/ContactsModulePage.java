@@ -11,9 +11,7 @@ public class ContactsModulePage {
     public ContactsModulePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    //US 12
-    @FindBy(xpath = "//ul[@id='appmenu']//a[contains(., 'Contacts')]")
-    public   WebElement contactModule;
+
     //13
     @FindBy(xpath = "//div[@class='vue-recycle-scroller__item-view']")
    public List<WebElement> contactList;

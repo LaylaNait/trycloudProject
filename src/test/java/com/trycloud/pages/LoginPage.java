@@ -19,8 +19,10 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@name='password']")
    public WebElement passwordInput;
+
     @FindBy(xpath = "//input[@id='submit-form']")
    public WebElement loginBtn;
+
     @FindBy(xpath = "//p[contains(text(),'Wrong username or password.')]")
    public WebElement errorMessage ;
 
