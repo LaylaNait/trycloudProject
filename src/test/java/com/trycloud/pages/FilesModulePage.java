@@ -11,6 +11,8 @@ public class FilesModulePage {
     public FilesModulePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
+    @FindBy(xpath = "//ul[@id='appmenu']/li[@data-id='files']")
+    public WebElement filesModule;
 
     @FindBy(xpath = "//label[@for='select_all_files']")
     public WebElement topCheckbox;
@@ -21,8 +23,8 @@ public class FilesModulePage {
     @FindBy(xpath = "//div[@id='app-content-files']//div[contains(@class, 'fileActionsMenu')]")
     public WebElement filesActionsMenu;
 
-    @FindBy(xpath = "//td//a[@data-action='menu']")
-   public List<WebElement> actionIcon;
+    @FindBy(xpath = "//div[@id='app-content-files']//td//a[@data-action='menu']")
+    public List<WebElement> actionIcon;
 
     @FindBy(xpath = "//a//span[contains(.,'Add to favorites')]")
    public WebElement addToFavorites;
@@ -53,6 +55,14 @@ public class FilesModulePage {
     //8
     @FindBy(xpath = "//span[contains(.,'Delete file')]")
    public WebElement deleteFile;
+
+    @FindBy(xpath = "//div[@id='app-content-trashbin']//*[@class='innernametext']")
+    public List<WebElement> allTrashBinFiles;
+
+    @FindBy(xpath = "//*[contains(@id, 'app-navigation')]/ul")
+    public WebElement filesLeftSideSubmodulesList;
+
+
     @FindBy(xpath = "//a[contains(.,'Deleted files')]")
    public WebElement deletedFiles;
     //9
