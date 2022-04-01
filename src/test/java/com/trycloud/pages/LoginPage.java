@@ -6,23 +6,22 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-
 public class LoginPage {
 
     public LoginPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//input[@name='user']")
     public WebElement usernameInput;
 
     @FindBy(xpath = "//input[@name='password']")
-   public WebElement passwordInput;
+    public WebElement passwordInput;
     @FindBy(xpath = "//input[@id='submit-form']")
-   public WebElement loginBtn;
+    public WebElement loginBtn;
     @FindBy(xpath = "//p[contains(text(),'Wrong username or password.')]")
-   public WebElement errorMessage ;
+    public WebElement errorMessage;
 
 
     public void login(String username, String password) {
@@ -32,7 +31,6 @@ public class LoginPage {
         passwordInput.sendKeys(password);
         loginBtn.click();
     }
-
 
 
 }
