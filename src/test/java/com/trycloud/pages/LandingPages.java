@@ -1,6 +1,7 @@
 package com.trycloud.pages;
 
 import com.trycloud.utilities.Driver;
+import com.trycloud.utilities.Waiter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,14 +20,29 @@ public class LandingPages {
     //14
     @FindBy(xpath = "//*[@id='header']//a/span[contains(.,'Magnify icon')]")
     public WebElement homePageSearchBtn;
+
+    //4
+    @FindBy(xpath = "//ul[@id='appmenu']/li[@data-id='files']")
+    public WebElement filesModule;
+
+    //11
+    @FindBy(xpath = "//ul[@id='appmenu']/li[5]")
+    public WebElement talkModule;
+
     @FindBy(xpath = "//input[@type='search']")
     public   WebElement homePageSearchBox;
+
     @FindBy(xpath = "//li/a[@class='unified-search__result unified-search__result--focused']")
     public WebElement expectedResultOption;
+    //US 12
+    @FindBy(xpath = "//ul[@id='appmenu']//a[contains(., 'Contacts')]")
+    public   WebElement contactModule;
+
     @FindBy(xpath = "//div[@id='expand']")
     public WebElement userBtn;
     @FindBy(xpath = "//a[contains(.,'Log out')]")
     WebElement logOutBtn;
+
 
     public void logout(){
         userBtn.click();

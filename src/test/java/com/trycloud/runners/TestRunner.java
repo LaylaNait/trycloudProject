@@ -18,7 +18,6 @@ import org.junit.runner.RunWith;
         , //if true = do not run my step_definition, but only check if any step is missing snippet
         tags = "@wip"
 
-
 )
 public class TestRunner {
 
