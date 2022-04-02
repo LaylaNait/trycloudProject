@@ -17,7 +17,7 @@ import java.util.Map;
 
 import static com.trycloud.utilities.TrycloudUtililities.clickModule;
 
-public class Step_Definitions {
+public class Step_Definitions { /*
  LoginPage loginPage = new LoginPage();
     @Given("user on the login page {string}")
     public void user_on_the_login_page(String env) {
@@ -60,5 +60,5 @@ public class Step_Definitions {
         filesModulePage.filesActionsMenu.findElement(By.xpath("//a[contains(.,'" + option + "')]")).click();
     }
 
-
+*/
 }

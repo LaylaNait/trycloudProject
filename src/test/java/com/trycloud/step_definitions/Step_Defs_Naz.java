@@ -20,7 +20,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class Step_Defs_Naz {
+public class Step_Defs_Naz {  /*
     LoginPage loginPage = new LoginPage();
     FilesModulePage filesModulePage = new FilesModulePage();
     Faker faker = new Faker();
@@ -280,12 +280,12 @@ public class Step_Defs_Naz {
     String initialUsageAmount;
 
     @And("user checks the current storage usage")
-    public void userChecksTheCurrentStorageUsage() {
+    public void userChecksTheCurrentStorageUsage() {  */
         /*
         @FindBy(xpath = "//a[@class='icon-quota svg']/p")
             public WebElement usageAmount;
          */
-        initialUsageAmount = Driver.getDriver().findElement(By.xpath("//a[@class='icon-quota svg']/p")).getText();
+       /* initialUsageAmount = Driver.getDriver().findElement(By.xpath("//a[@class='icon-quota svg']/p")).getText();
     }
 
     @And("user picks uploads {string} with the upload file option")
@@ -342,7 +342,7 @@ public class Step_Defs_Naz {
          @FindBy(xpath = "//ul[@id='appmenu']/li[@data-id='contacts']")
     public WebElement ContactsModule;
          */
-        Methods.hover(Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[@data-id='contacts']")));
+       /* Methods.hover(Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[@data-id='contacts']")));
         Driver.getDriver().findElement(By.xpath("//ul[@id='appmenu']/li[@data-id='contacts']")).click();
     }
 
@@ -357,7 +357,7 @@ public class Step_Defs_Naz {
         @FindBy(xpath = "//span[@aria-label='Magnify icon']")
     public WebElement magnifierIcon;
          */
-        Driver.getDriver().findElement(By.xpath("//span[@aria-label='Magnify icon']")).click();
+        /*Driver.getDriver().findElement(By.xpath("//span[@aria-label='Magnify icon']")).click();
     }
     String actualSearchQ;
 
@@ -368,7 +368,7 @@ public class Step_Defs_Naz {
         @FindBy(xpath = "//input[@type='search']")
     public WebElement searchInput;
          */
-       Driver.getDriver().findElement(By.xpath("//input[@type='search']")).sendKeys(searchQuery);
+     /*  Driver.getDriver().findElement(By.xpath("//input[@type='search']")).sendKeys(searchQuery);
     }
 
     @Then("verify the app displays the {string} option")
@@ -376,5 +376,5 @@ public class Step_Defs_Naz {
         //check each user files and users for extensive search
         Assert.assertEquals(expectedResult,actualSearchQ);
     }
-    //needs more Explicit wait
+    //needs more Explicit wait  */
 }

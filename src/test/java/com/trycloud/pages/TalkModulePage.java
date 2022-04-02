@@ -21,12 +21,15 @@ public class TalkModulePage {
     @FindBy(xpath = "//ul//a[contains(@aria-label,'Conversation, User46')]")
    public WebElement userNameSearchedFor;
 
-    @FindBy(xpath = "//div[@class='new-message']")
-   public WebElement messageBox;
+   /* @FindBy(xpath = "//div[@class='new-message']")
+   public WebElement messageBox;*/
+
+    @FindBy(xpath = "//div[@contenteditable='true']")
+    public WebElement messageBox;
 
     @FindBy(xpath = "//button[@type='submit']")
    public WebElement submitBtnForChat;
 
     @FindBy(xpath = "//div[@class='message__main__text']//div[@class='rich-text--wrapper']")
-   public WebElement messageOnConversationLog;
+   public List<WebElement> messageOnConversationLog;
 }
