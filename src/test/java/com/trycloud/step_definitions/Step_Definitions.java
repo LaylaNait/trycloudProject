@@ -74,6 +74,7 @@ public class Step_Definitions {
 
 
     //US8
+
     String fileToBeDeleted;
 
     @Given("user on the dashboard page")
