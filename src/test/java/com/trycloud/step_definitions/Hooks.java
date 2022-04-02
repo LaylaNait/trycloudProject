@@ -14,6 +14,6 @@ public class Hooks {
             WebDriver driver = Driver.getDriver();
             byte[]bytes =((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
         }
-      //  Driver.closeDriver();
+        Driver.closeDriver();
     }
 }
