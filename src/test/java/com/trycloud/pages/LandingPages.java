@@ -16,6 +16,9 @@ public class LandingPages {
      //3
     @FindBy(xpath = "//*[@id='appmenu']/li[@data-id]")
    public List <WebElement> topMenuWithAllModules;
+    //9
+    @FindBy(xpath = "//div[@class='app-sidebar-tabs']//div[@class='message' and not(@contenteditable)]")
+    public WebElement allComments;
     //14
     @FindBy(xpath = "//*[@id='header']//a/span[contains(.,'Magnify icon')]")
     public WebElement homePageSearchBtn;

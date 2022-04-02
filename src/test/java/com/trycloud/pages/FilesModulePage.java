@@ -29,20 +29,20 @@ public class FilesModulePage {
     @FindBy(xpath = "//a[contains(.,'Favorites')]")
    public WebElement favorite;
     //6
-    @FindBy(xpath = "//tbody[@id='fileList']//span[@class='innernametext']")
-    WebElement actualNamesOfFiles;
+    @FindBy(xpath = "//div[@id='app-content-files']//*[@class='innernametext']")
+    public List <WebElement> actualNamesOfFiles;
     //6 /7 /8 /9
     @FindBy(xpath = "//span[@class='icon icon-add']")
-    WebElement addIcon;
+    public WebElement addIcon;
     //7
     @FindBy(xpath = "//span[.='Upload file']")
-    WebElement uploadFiles;
+    public WebElement uploadFiles;
     @FindBy(xpath = "//span[.='New folder']")
-    WebElement newFolder;
-    @FindBy(xpath = "//input[@id='view40-input-folder']")
-    WebElement inputFolderName;
+    public WebElement newFolder;
+    @FindBy(xpath = "//input[contains(@value,'New folder')]")
+    public WebElement inputFolderName;
     @FindBy(xpath = "//input[@class='icon-confirm']")
-    WebElement submitIcon;
+    public WebElement submitIcon;
     //8
     @FindBy(xpath = "//span[contains(.,'Delete file')]")
    public WebElement deleteFile;
