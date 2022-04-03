@@ -1,6 +1,8 @@
 package com.trycloud.utilities;
 
+
 import org.openqa.selenium.By;
+
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +20,7 @@ public class Waiter {
     public Waiter(WebDriver driver){
         this.driver = driver;
     }
+
 
     public void waitForElement(WebElement element, long timeOutInSeconds){
         WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
@@ -39,6 +42,7 @@ public class Waiter {
         wait.until(ExpectedConditions.alertIsPresent());
     }
 
+
     public void fluentWaitForElement(WebElement element){
         Wait<WebDriver> wait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))
@@ -51,4 +55,7 @@ public class Waiter {
         WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
         wait.until(ExpectedConditions.invisibilityOf(element));
     }
+
+
 }
+

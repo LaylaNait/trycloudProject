@@ -20,8 +20,10 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@name='password']")
    public WebElement passwordInput;
+
     @FindBy(xpath = "//input[@id='submit-form']")
    public WebElement loginBtn;
+
     @FindBy(xpath = "//p[contains(text(),'Wrong username or password.')]")
    public WebElement errorMessage ;
 
@@ -33,6 +35,14 @@ public class LoginPage {
         passwordInput.sendKeys(password);
         loginBtn.click();
     }
+    public void loginWithConfigurationProp() {
+        usernameInput.clear();
+        usernameInput.sendKeys(ConfigurationReader.getProperty("username1"));
+        passwordInput.clear();
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        loginBtn.click();
+    }
+
 
     public void loginWithConfigurationProp() {
         usernameInput.clear();

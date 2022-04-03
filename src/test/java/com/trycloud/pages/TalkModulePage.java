@@ -11,19 +11,22 @@ public class TalkModulePage {
     public TalkModulePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    //11
-    @FindBy(xpath = "//ul[@id='appmenu']/li[5]")
-   public WebElement talkModule;
+
     @FindBy(xpath = "//input[@type='text']")
    public WebElement searchInputTalk;
+
     @FindBy(xpath = "//span[@class='acli__content__line-one__title']")
    public List<WebElement> usersNamesChat;
+
     @FindBy(xpath = "//ul//a[contains(@aria-label,'Conversation, User46')]")
    public WebElement userNameSearchedFor;
+
     @FindBy(xpath = "//div[@class='new-message']")
    public WebElement messageBox;
+
     @FindBy(xpath = "//button[@type='submit']")
    public WebElement submitBtnForChat;
+
     @FindBy(xpath = "//div[@class='message__main__text']//div[@class='rich-text--wrapper']")
    public WebElement messageOnConversationLog;
 }
