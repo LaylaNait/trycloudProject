@@ -36,6 +36,21 @@ public class FilesModulePage {
    public WebElement favorite;
     //6
     @FindBy(xpath = "//div[@id='app-content-files']//*[@class='innernametext']")
+
+    public List <WebElement> actualNamesOfFiles;
+    //6 /7 /8 /9
+    @FindBy(xpath = "//span[@class='icon icon-add']")
+    public WebElement addIcon;
+    //7
+    @FindBy(xpath = "//span[.='Upload file']")
+    public WebElement uploadFiles;
+    @FindBy(xpath = "//span[.='New folder']")
+    public WebElement newFolder;
+    @FindBy(xpath = "//input[contains(@value,'New folder')]")
+    public WebElement inputFolderName;
+    @FindBy(xpath = "//input[@class='icon-confirm']")
+    public WebElement submitIcon;
+
    public List <WebElement> actualNamesOfFiles;
     //6 /7 /8 /9
     @FindBy(xpath = "//span[@class='icon icon-add']")
@@ -52,6 +67,7 @@ public class FilesModulePage {
 
     @FindBy(xpath = "//input[@class='icon-confirm']")
    public WebElement submitIcon;
+
     //8
     @FindBy(xpath = "//span[contains(.,'Delete file')]")
    public WebElement deleteFile;

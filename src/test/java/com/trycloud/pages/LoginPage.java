@@ -44,6 +44,14 @@ public class LoginPage {
     }
 
 
+    public void loginWithConfigurationProp() {
+        usernameInput.clear();
+        usernameInput.sendKeys(ConfigurationReader.getProperty("username1"));
+        passwordInput.clear();
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        loginBtn.click();
+    }
+
 
 
 }
