@@ -14,8 +14,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = "com/trycloud/step_definitions",
-        dryRun = false, //if true = do not run my step_definition, but only check if any step is missing snippet
-        tags =""
+        dryRun = false
+        , //if true = do not run my step_definition, but only check if any step is missing snippet
+        tags = "@wip"
 
 )
 public class TestRunner {
