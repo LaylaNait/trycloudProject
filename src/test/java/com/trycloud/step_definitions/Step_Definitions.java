@@ -21,11 +21,16 @@ import java.util.Map;
 
 import static com.trycloud.utilities.TrycloudUtililities.clickModule;
 
+
+public class Step_Definitions { 
+ LoginPage loginPage = new LoginPage();
+
 public class Step_Definitions {
     LoginPage loginPage = new LoginPage();
     FilesModulePage filesModulePage = new FilesModulePage();
     LandingPages landingPages = new LandingPages();
     Waiter waiter = new Waiter(Driver.getDriver());
+
 
     @Given("user on the login page {string}")
     public void user_on_the_login_page(String env) {
@@ -70,6 +75,7 @@ public class Step_Definitions {
         }
         filesModulePage.filesActionsMenu.findElement(By.xpath("//a[contains(.,'" + option + "')]")).click();
     }
+
 
 
 
@@ -125,5 +131,6 @@ public class Step_Definitions {
         }
         Assert.assertTrue(filesNameInTrash.contains(fileToBeDeleted));
     }
+
 
 }
