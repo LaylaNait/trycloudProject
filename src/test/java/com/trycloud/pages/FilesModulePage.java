@@ -11,6 +11,8 @@ public class FilesModulePage {
     public FilesModulePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }
+    @FindBy(xpath = "//ul[@id='appmenu']/li[@data-id='files']")
+    public WebElement filesModule;
 
     @FindBy(xpath = "//label[@for='select_all_files']")
     public WebElement topCheckbox;
@@ -21,8 +23,8 @@ public class FilesModulePage {
     @FindBy(xpath = "//div[@id='app-content-files']//div[contains(@class, 'fileActionsMenu')]")
     public WebElement filesActionsMenu;
 
-    @FindBy(xpath = "//td//a[@data-action='menu']")
-   public List<WebElement> actionIcon;
+    @FindBy(xpath = "//div[@id='app-content-files']//td//a[@data-action='menu']")
+    public List<WebElement> actionIcon;
 
     @FindBy(xpath = "//a//span[contains(.,'Add to favorites')]")
    public WebElement addToFavorites;
@@ -34,6 +36,21 @@ public class FilesModulePage {
    public WebElement favorite;
     //6
     @FindBy(xpath = "//div[@id='app-content-files']//*[@class='innernametext']")
+
+    public List <WebElement> actualNamesOfFiles;
+    //6 /7 /8 /9
+    @FindBy(xpath = "//span[@class='icon icon-add']")
+    public WebElement addIcon;
+    //7
+    @FindBy(xpath = "//span[.='Upload file']")
+    public WebElement uploadFiles;
+    @FindBy(xpath = "//span[.='New folder']")
+    public WebElement newFolder;
+    @FindBy(xpath = "//input[contains(@value,'New folder')]")
+    public WebElement inputFolderName;
+    @FindBy(xpath = "//input[@class='icon-confirm']")
+    public WebElement submitIcon;
+
    public List <WebElement> actualNamesOfFiles;
     //6 /7 /8 /9
     @FindBy(xpath = "//span[@class='icon icon-add']")
@@ -50,9 +67,18 @@ public class FilesModulePage {
 
     @FindBy(xpath = "//input[@class='icon-confirm']")
    public WebElement submitIcon;
+
     //8
     @FindBy(xpath = "//span[contains(.,'Delete file')]")
    public WebElement deleteFile;
+
+    @FindBy(xpath = "//div[@id='app-content-trashbin']//*[@class='innernametext']")
+    public List<WebElement> allTrashBinFiles;
+
+    @FindBy(xpath = "//*[contains(@id, 'app-navigation')]/ul")
+    public WebElement filesLeftSideSubmodulesList;
+
+
     @FindBy(xpath = "//a[contains(.,'Deleted files')]")
    public WebElement deletedFiles;
     //9

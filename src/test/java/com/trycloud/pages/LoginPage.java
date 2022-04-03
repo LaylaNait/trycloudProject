@@ -1,5 +1,6 @@
 package com.trycloud.pages;
 
+import com.trycloud.utilities.ConfigurationReader;
 import com.trycloud.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,6 +33,22 @@ public class LoginPage {
         usernameInput.sendKeys(username);
         passwordInput.clear();
         passwordInput.sendKeys(password);
+        loginBtn.click();
+    }
+    public void loginWithConfigurationProp() {
+        usernameInput.clear();
+        usernameInput.sendKeys(ConfigurationReader.getProperty("username1"));
+        passwordInput.clear();
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
+        loginBtn.click();
+    }
+
+
+    public void loginWithConfigurationProp() {
+        usernameInput.clear();
+        usernameInput.sendKeys(ConfigurationReader.getProperty("username1"));
+        passwordInput.clear();
+        passwordInput.sendKeys(ConfigurationReader.getProperty("password"));
         loginBtn.click();
     }
 
