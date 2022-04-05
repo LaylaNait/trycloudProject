@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class ContactsModulePage {
+
     public ContactsModulePage() {
         PageFactory.initElements(Driver.getDriver(),this);
     }

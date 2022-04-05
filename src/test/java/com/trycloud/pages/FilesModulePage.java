@@ -38,6 +38,8 @@ public class FilesModulePage {
     //6 /7 /8 /9
     @FindBy(xpath = "//span[@class='icon icon-add']")
    public WebElement addIcon;
+    @FindBy(xpath = "//div[@class='newFileMenu popovermenu bubble menu open menu-left']")
+    public WebElement addIconMenu;
     //7
     @FindBy(xpath = "//span[.='Upload file']")
    public WebElement uploadFiles;
@@ -72,7 +74,19 @@ public class FilesModulePage {
     //10
    public WebElement settingBtn;
     @FindBy(xpath = "//div[@id='app-settings-content']//input[@type='checkbox']")
-   public WebElement settingOptions;
+   public List<WebElement> settingOptions;
     @FindBy(xpath = "//a[@class='icon-quota svg']/p")
    public WebElement usedStorageParagraph;
+
+    @FindBy(xpath = "//*[@id='app-navigation']//a[contains(., 'Favorites')]")
+    public WebElement filesLeftSideSubmoduleFavorites;
+
+    @FindBy(xpath = "//*[@id='app-navigation']//a[contains(., 'Deleted f')]")
+    public WebElement filesLeftSideSubmoduleDeleted;
+
+    @FindBy(xpath = "//*[@id='app-navigation']//a[contains(., 'B used')]")
+    public WebElement filesLeftSideSubmoduleUsage;
+
+    @FindBy(xpath = "//*[@id='app-navigation']//button[contains(., 'Settings')]")
+    public WebElement filesLeftSideSubmoduleSettings;
 }
