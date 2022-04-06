@@ -22,9 +22,6 @@ import java.util.Map;
 import static com.trycloud.utilities.TrycloudUtililities.clickModule;
 
 
-public class Step_Definitions { 
- LoginPage loginPage = new LoginPage();
-
 public class Step_Definitions {
     LoginPage loginPage = new LoginPage();
     FilesModulePage filesModulePage = new FilesModulePage();
